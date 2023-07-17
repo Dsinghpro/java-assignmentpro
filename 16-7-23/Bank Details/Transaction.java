@@ -1,9 +1,11 @@
+import java.time.LocalDate;
 
 public class Transaction extends Account{
     private char ttype;
+    public int transactionInaDay=0;
 
    public Transaction(){}
-    public Transaction(double accountNo,int openedDate,double balance,char ttype){
+    public Transaction(double accountNo,LocalDate openedDate,double balance,char ttype){
        super(accountNo,openedDate,balance);
        this.ttype=ttype;
 
@@ -20,13 +22,17 @@ public class Transaction extends Account{
        } else 
     	   throw new InsufficientBalanceException("Your accounts funds are not sufficient");
     }
-   public boolean transForaccount(char ttype,Account account,double amount) {
+   public boolean transForaccount(char ttype,Account account,double amount) throws RuntimeException  {
+	   if(transactionInaDay>SavingAccount.noOfTranscationPerDay)
+		   throw new RuntimeException("Transaction limit Exceed");
 	   switch(ttype) {
 	   case 'd':
 		   deposit( account, amount);
+		   transactionInaDay++;
 		   return true;
 	   case 'w':
 		   withdraw(account,amount);
+		   transactionInaDay++;
 	   default:
 		   throw new RuntimeException("Invalid Transaction!!!");
 	   }
