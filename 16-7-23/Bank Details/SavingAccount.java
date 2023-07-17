@@ -1,7 +1,7 @@
-package Praticejava;
+
 
 public class SavingAccount extends Account{
-    private double minimumDepositAmount;
+    public static double minimumDepositAmount;
     private int noOfTranscationPerDay;
     public SavingAccount(){}
     public SavingAccount(double accountNo,int openedDate,double balance,double minimumDepositAmount,int noOfTranscationPerDay)
@@ -10,11 +10,11 @@ public class SavingAccount extends Account{
         this.noOfTranscationPerDay=noOfTranscationPerDay;
     }
 
-    public static double getMinimumDepositAmount() {
+    public  double getMinimumDepositAmount() {
         return minimumDepositAmount;
     }
 
-    public static void setMinimumDepositAmount(double minimumDepositAmount) {
+    public  void setMinimumDepositAmount(double minimumDepositAmount) {
         this.minimumDepositAmount = minimumDepositAmount;
     }
 
@@ -33,12 +33,7 @@ public class SavingAccount extends Account{
             throw new RuntimeException("Required minimum balance of 2000");
 
     }
-    public boolean validatenoOfTranstionPerDay(){
-        if(noOfTranscationPerDay<=10)
-            return true;
-        else
-            throw new RuntimeException("You try to send money more than 10 times in one day");
-    }
+   
 
 
 
