@@ -1,10 +1,10 @@
-
+import java.time.LocalDate;
 
 public class SavingAccount extends Account{
     public static double minimumDepositAmount;
-    private int noOfTranscationPerDay;
+    public static int noOfTranscationPerDay;
     public SavingAccount(){}
-    public SavingAccount(double accountNo,int openedDate,double balance,double minimumDepositAmount,int noOfTranscationPerDay)
+    public SavingAccount(double accountNo,LocalDate openedDate,double balance,double minimumDepositAmount,int noOfTranscationPerDay)
     {   super(accountNo,openedDate,balance);
         this.minimumDepositAmount =minimumDepositAmount;
         this.noOfTranscationPerDay=noOfTranscationPerDay;
