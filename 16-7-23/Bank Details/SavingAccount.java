@@ -10,11 +10,11 @@ public class SavingAccount extends Account{
         this.noOfTranscationPerDay=noOfTranscationPerDay;
     }
 
-    public double getMinimumDepositAmount() {
+    public static double getMinimumDepositAmount() {
         return minimumDepositAmount;
     }
 
-    public void setMinimumDepositAmount(double minimumDepositAmount) {
+    public static void setMinimumDepositAmount(double minimumDepositAmount) {
         this.minimumDepositAmount = minimumDepositAmount;
     }
 
@@ -27,7 +27,7 @@ public class SavingAccount extends Account{
     }
 
     public boolean validateminimumDeposit(double minimumDepositAmount){
-        if(this.minimumDepositAmount >=2000)
+        if(minimumDepositAmount >=2000)
             return true;
         else
             throw new RuntimeException("Required minimum balance of 2000");
