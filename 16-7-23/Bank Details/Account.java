@@ -1,9 +1,8 @@
-package Praticejava;
-
 public class Account {
     private double accountNo;
     private int openedDate;
     private double balance;
+    private int noOfTranscationPerDay=0;
     public Account(){}
 
     public Account(double accountNo,int openedDate,double balance) {
@@ -34,5 +33,11 @@ public class Account {
 
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+    public boolean validatenoOfTranstionPerDay(){
+        if(noOfTranscationPerDay<=10)
+            return true;
+        else
+            throw new RuntimeException("You try to send money more than 10 times in one day");
     }
 }
