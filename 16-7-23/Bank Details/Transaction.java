@@ -1,4 +1,3 @@
-package Praticejava;
 
 public class Transaction extends Account{
     private char ttype;
@@ -13,11 +12,27 @@ public class Transaction extends Account{
        account.setBalance(account.getBalance()+amount);
 
     }
-    public void withdraw(Account account,double amount){
+    public String withdraw(Account account,double amount) throws RuntimeException{
        double balance=account.getBalance();
 
-       if(balance-amount>=)
+       if(balance-amount>=SavingAccount.minimumDepositAmount) {
+    	   return balance-amount+" is rem balance";
+       } else 
+    	   throw new InsufficientBalanceException("Your accounts funds are not sufficient");
     }
+   public boolean transForaccount(char ttype,Account account,double amount) {
+	   switch(ttype) {
+	   case 'd':
+		   deposit( account, amount);
+		   return true;
+	   case 'w':
+		   withdraw(account,amount);
+	   default:
+		   throw new RuntimeException("Invalid Transaction!!!");
+	   }
+	  
+		   
+   }
 
 
 
