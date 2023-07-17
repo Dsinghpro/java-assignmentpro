@@ -1,4 +1,4 @@
-
+import java.time.LocalDate;
 public class Test {
     public static void main(String[] args){
         Account[] accounts=null;
@@ -6,9 +6,10 @@ public class Test {
         try{
             accounts=new Account[10];
             b=new Bank("Punjab National Bank","Alpha 2",accounts);
-            accounts[0]=new SavingAccount(7476,14/11/1999,5000,2000,5);
-            accounts[1]=new SavingAccount(7654,15/11/1999,3000,2000,8);
-            accounts[3]=new CurrentAccount(45678,15/8/20,8000,2);
+            b.addAccount(new SavingAccount(7476,LocalDate.of(1999,11,21),5000,2000,5));
+            b.addAccount(new SavingAccount(7654,LocalDate.of(2023, 7, 17),3000,2000,8));
+            b.addAccount(new CurrentAccount(45678,LocalDate.of(2020, 11, 14),8000,2));
+           
             b.showAccounts();
         }
         catch (RuntimeException ex){
