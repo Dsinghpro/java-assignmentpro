@@ -1,0 +1,49 @@
+public class List <T>{
+    private T[] a;
+    private int index=-1;
+    public List(T[] a){
+        this.a=a;
+    }
+
+    private int numberOfelement=0;
+
+    public boolean isEmpty(){
+        return index==-1;
+    }
+    private boolean isFull() {
+        return index==9;
+    }
+
+
+
+    public void addAtThebeg(T element){
+       for(int i=a.length-1;i>0;i--)
+           a[i+1]=a[i];
+
+
+    }
+    public void append(T element){
+        if(!isFull())
+            a[++index]=element;
+        else
+            throw new RuntimeException("Bag Overflow");
+    }
+
+    public void insertAtPosition(int position,T element){
+        if(position<=index && position >=0){
+            for(int i=0;i>position;i--)
+                a[i]=a[i-1];
+            a[position]=element;
+        }
+    }
+
+    public void deleteFromEnd(){
+        
+    }
+
+
+
+
+
+
+}
