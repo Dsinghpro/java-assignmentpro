@@ -1,11 +1,15 @@
-public class List <T>{
+public class GenList <T>{
     private T[] a;
     private int index=-1;
-    public List(T[] a){
-        this.a=a;
-    }
+    
 
-    private int numberOfelement=0;
+
+	public GenList(T[] a) {
+		
+		this.a = a;
+		
+	}
+   
 
     public boolean isEmpty(){
         return index==-1;
@@ -14,12 +18,26 @@ public class List <T>{
         return index==9;
     }
 
-
+    
+    
+    public void printList() {
+    	for(T i:a) {
+    		System.out.println(i);
+    	}
+    }
 
     public void addAtThebeg(T element){
-       for(int i=a.length-1;i>0;i--)
-           a[i+1]=a[i];
-
+       
+       if(index!=-1) {
+           for(int i=index;i>=0;i--) {
+        	   a[i+1]=a[i];
+           }
+           a[0]=element;
+           index++;
+       }
+    	   
+    	
+       
 
     }
     public void append(T element){
@@ -38,12 +56,32 @@ public class List <T>{
     }
 
     public void deleteFromEnd(){
-        
+    	this.index--;
     }
-
-
-
-
-
-
+    public void deleteFirst() {
+    	 for(int i=a.length-1;i>0;i--)
+    		 a[i-1]=a[i];
+    }
+    public void delete(T element) {
+    	for(int i=0;i<this.index;i++) {
+    		if(a[i]==element) {
+    			a[i]=null;
+    		}
+    		
+    			
+    	}
+    	throw new RuntimeException("Element does not exist");
+    		
+    }
+    
+    
+    public static void main(String[] args) {
+		GenList<Integer> gl=new GenList<Integer>(new Integer[15]);
+		gl.a[0]=15;
+		gl.index++;
+		for(int i=0;i<10;i++)
+			gl.addAtThebeg(i*10);
+			gl.append(7);
+		gl.printList();
+	}
 }
