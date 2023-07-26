@@ -1,0 +1,8 @@
+<h1>Employee Details</h1>
+<emp-curd (addEmployeeEvent)="addEmployee($event)"></emp-curd>
+<ol>
+    <li *ngFor="let e of empList">
+        <emp-component [eobj]=e (deleteEvent)="deleteEmployee($event)"></emp-component>
+        <!-- e here work as a iterator -->
+    </li>
+</ol>

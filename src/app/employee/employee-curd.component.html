@@ -1,0 +1,21 @@
+<table border="1">
+    <tr>
+    <th>Employee Id</th>
+    <td><input type="text" #t1></td>
+    </tr>
+    <tr>
+    <th>Employee Name</th>
+    <td><input type="text" #t2></td>
+    </tr>
+    <tr>
+    <th>Employee Salary</th>
+    <td><input type="text" #t3></td>
+    </tr>
+    <tr>
+    <th>Department No.</th>
+    <td><input type="text" #t4></td>
+    </tr>
+    <tr>
+        <td><input type="button" value="Add" (click)="addEmployee(t1.value,t2.value,(t3.value),(t4.value))"></td>
+    </tr>
+</table>
