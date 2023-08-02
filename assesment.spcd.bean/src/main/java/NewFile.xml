@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans   xmlns="http://www.springframework.org/schema/beans"
+		xmlns:context="http://www.springframework.org/schema/context"
+		 xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:c="http://www.springframework.org/schema/c" 
+			
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd">
+         <context:component-scan base-package="com.diksha.assement.spcd.bean"/>
+    <!-- <bean id="addcard" class="com.diksha.assesment.spcd.bean.AadharCard">
+	   <property  name="dob" value="1999"/>
+	<property  name="city" value="Vadodara"/>
+	<property name="state" value="Gujarat"/>
+	<property name="mobileNo" value="76071086"/>
+	
+	</bean>
+	 <bean id="citi" class="com.diksha.assesment.spcd.bean.Citizen">
+	  <property  name="name" value="Diksha"/>
+	<property  name="age" value="23"/>
+	<property name="gender" value="Female"/>
+	<property name="adharcard" ref="addcard"/>
+	
+	</bean> -->
+        
+        
+	
+	</beans>

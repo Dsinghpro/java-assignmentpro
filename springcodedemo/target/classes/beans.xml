@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans   xmlns="http://www.springframework.org/schema/beans"
+		xmlns:context="http://www.springframework.org/schema/context"
+		 xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:c="http://www.springframework.org/schema/c" 
+			
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd">
+        <!-- <context:annotation-config/>-->
+        <context:component-scan base-package="com.diksha.spcd.beans"/>
+	
+	</beans>
+	
+	
+	<!--  <bean id="wish1" class="com.diksha.spcd.beans.Wish" destroy-method="wishDestroy" init-method="wishInit" >
+	<property name="message" value="Good Morning World!!"/>
+	</bean>
+	<bean id="cntry" class="com.diksha.spcd.beans.Country">
+	<property name="countryName" value="India"/>
+	<property name="currencyName" value="Rupees"/>
+	<property name="states" >
+	<map>
+		<entry key="AP" value="Andhra Pradesh"/>
+		<entry key="UP" value="Uttar Pradesh"/>
+		<entry key ="GJ" value="Gujarat"/>
+			<entry key ="Bhr" value="Bihar"/>
+				<entry key ="TS" value="Telangana"/>
+					<entry key ="TN" value="TamilNadu"/>
+			</map>
+		</property>
+	
+	</bean>-->
+	
+	<!--  <bean id="showadd" class="com.diksha.spcd.beans.Address" c:hno="164" c:streetName="MG street"  c:city="Vadodara"  c:state="Gujarat"/>-->
+	<!--  <bean id="add1" class="com.diksha.spcd.beans.Address">
+	  <property  name="hno" value="164"/>
+	<property  name="streetName" value="MG Street"/>
+	<property  name="city" value="Vadodara"/>
+	<property name="state" value="Gujarat"/>
+	
+	</bean>
+	<bean id="showper" class="com.diksha.spcd.beans.Person">
+	  <property name="addharNo" value="55678"/>
+	<property  name="name" value="vijay kumar"/>
+	<property  name="age" value="23"/>-->
+	<!--   <property name="address" ref="showadd"/> dependency address-->
+	
+	<!--  </bean>-->
+	<!--  <bean id="showper" class="com.diksha.spcd.beans.Person" autowire="byName">-->
+	
+	
+
