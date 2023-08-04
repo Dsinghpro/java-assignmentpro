@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+ <hibernate-configuration>
+ 	<session-factory>
+ 		<!-- 
+ 		<property name="hibernate.connection.drivare_class">com.mysql.cj.jdbc.Driver</property>
+ 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/prolifics</property>
+ 		<property name="hibernate.connection.username">root</property>
+ 		<property name="hibernate.connection.password">jerry*26@Tom</property>
+ 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+ 		<mapping resource="Employee.hbm.xml" />
+ 		 -->
+ 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/prolifics</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">jerry*26@Tom</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		<mapping resource="Employee.hbm.xml" />
+		<mapping class="com.diksha.hibernate.entity.Address" />
+		<mapping class="com.diksha.hibernate.entity.Person" />
+		
+ 	</session-factory>	
+ </hibernate-configuration>
+	
