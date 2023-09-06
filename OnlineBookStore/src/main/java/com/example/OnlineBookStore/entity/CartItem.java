@@ -15,18 +15,18 @@ public class CartItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cartId")
+    @Column(name = "cart_id")
     private int cartId;
 
     @ManyToOne
-    @JoinColumn(name = "bookId")
+    @JoinColumn(name = "book_id")
     private Books book;
 
     @ManyToOne
     @JoinColumn(name = "customer_registration_id")
     private CustomerRegistration customerRegistration;
 
-    @Column(name = "pricePerUnit")
+    @Column(name = "price_per_unit")
     private Float pricePerUnit;
 
     @Column(name = "quantity")

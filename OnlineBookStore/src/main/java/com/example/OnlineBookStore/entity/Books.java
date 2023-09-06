@@ -14,15 +14,15 @@ public class Books {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "bookId")
+    @Column(name = "book_id")
     private int bookId;
 
     @ManyToOne
-    @JoinColumn(name = "authorId")
+    @JoinColumn(name = "author_id")
     private Authors author;
 
     @ManyToOne
-    @JoinColumn(name = "publicationId")
+    @JoinColumn(name = "publication_id")
     private Publication publication;
 
     @Column(name = "Title", nullable = false)
@@ -34,7 +34,7 @@ public class Books {
     @Column(name = "Category", nullable = false)
     private String category;
 
-    @Column(name = "publicationYear", nullable = false)
+    @Column(name = "publication_years", nullable = false)
     private int publicationYear;
 
     @Column(name = "Price", nullable = false)
@@ -43,81 +43,77 @@ public class Books {
     @Column(name = "Quantity", nullable = false)
     private int quantity;
 
-    public Books() {
-        // Default constructor
-    }
+	public int getBookId() {
+		return bookId;
+	}
 
-    // Getters and setters for all fields
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
 
-    public int getBookId() {
-        return bookId;
-    }
+	public Authors getAuthor() {
+		return author;
+	}
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
-    }
+	public void setAuthor(Authors author) {
+		this.author = author;
+	}
 
-    public Authors getAuthor() {
-        return author;
-    }
+	public Publication getPublication() {
+		return publication;
+	}
 
-    public void setAuthor(Authors author) {
-        this.author = author;
-    }
+	public void setPublication(Publication publication) {
+		this.publication = publication;
+	}
 
-    public Publication getPublication() {
-        return publication;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setPublication(Publication publication) {
-        this.publication = publication;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public String getISBN() {
+		return ISBN;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setISBN(String iSBN) {
+		ISBN = iSBN;
+	}
 
-    public String getISBN() {
-        return ISBN;
-    }
+	public String getCategory() {
+		return category;
+	}
 
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
-    }
+	public void setCategory(String category) {
+		this.category = category;
+	}
 
-    public String getCategory() {
-        return category;
-    }
+	public int getPublicationYear() {
+		return publicationYear;
+	}
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+	public void setPublicationYear(int publicationYear) {
+		this.publicationYear = publicationYear;
+	}
 
-    public int getPublicationYear() {
-        return publicationYear;
-    }
+	public float getPrice() {
+		return price;
+	}
 
-    public void setPublicationYear(int publicationYear) {
-        this.publicationYear = publicationYear;
-    }
+	public void setPrice(float price) {
+		this.price = price;
+	}
 
-    public float getPrice() {
-        return price;
-    }
+	public int getQuantity() {
+		return quantity;
+	}
 
-    public void setPrice(float price) {
-        this.price = price;
-    }
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
+    
 }

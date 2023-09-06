@@ -19,13 +19,13 @@ public class Inventory {
     private int inventoryId;
 
     @ManyToOne
-    @JoinColumn(name = "BookId")
+    @JoinColumn(name = "Book_id")
     private Books book;
 
-    @Column(name = "stocklevelavilable")
+    @Column(name = "stocklevel_avilable")
     private int stockLevelAvailable;
 
-    @Column(name = "stockLevelsold")
+    @Column(name = "stockLevel_sold")
     private int stockLevelSold;
 
     public Inventory() {

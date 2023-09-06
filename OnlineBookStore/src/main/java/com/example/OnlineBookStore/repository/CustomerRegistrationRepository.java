@@ -6,6 +6,6 @@ import com.example.OnlineBookStore.entity.CustomerRegistration;
 
 public interface CustomerRegistrationRepository extends JpaRepository<CustomerRegistration,Integer>{
 
-	CustomerRegistration findByUserId(String userId);
+//	CustomerRegistration findByUserId(String userId);
 
 }

@@ -19,14 +19,14 @@ public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "orderId")
+    @Column(name = "order_id")
     private int orderId;
 
     @ManyToOne
     @JoinColumn(name = "customer_registration_id")
     private CustomerRegistration customerRegistration;
 
-    @Column(name = "OrderDate")
+    @Column(name = "Order_date")
     private Date orderDate;
 
     @Column(name = "shippingAddress", nullable = false, length = 100)
@@ -38,7 +38,7 @@ public class Order {
     @Column(name = "Tax")
     private Float tax;
 
-    @Column(name = "TotalAmount", precision = 10, scale = 2)
+    @Column(name = "Total_amount", precision = 10, scale = 2)
     private BigDecimal totalAmount;
 
     public Order() {

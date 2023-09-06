@@ -13,16 +13,16 @@ public class Authors {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "authorId")
+    @Column(name = "author_id")
     private int authorId;
 
-    @Column(name = "authorName", length = 200, nullable = false)
+    @Column(name = "author_name", length = 200, nullable = false)
     private String authorName;
 
     @Column(name = "Nationality", length = 50, nullable = false)
     private String nationality;
 
-    @Column(name = "Birth_Date", nullable = false)
+    @Column(name = "birth_Date", nullable = false)
     private Date birthDate;
 
     // Constructors, getters, and setters

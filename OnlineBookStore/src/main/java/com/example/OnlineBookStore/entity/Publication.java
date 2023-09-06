@@ -15,7 +15,9 @@ public class Publication {
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
+    @Column(name="publication_id")
 	private int publicationId;
+	@Column(name="publisher_name")
     private String publicationName;
     @Column(name="Address")
     private String address;
